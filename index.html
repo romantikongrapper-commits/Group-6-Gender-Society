@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Gender Laws Philippines | Equality & Protection</title>
+  <!-- Google Fonts + simple reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fefaf5;
+      color: #1e2a2f;
+      scroll-behavior: smooth;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* modern header with soft gradient */
+    .hero {
+      background: linear-gradient(135deg, #2b5e6b 0%, #3c2f2f 100%);
+      color: white;
+      padding: 3rem 0 4rem;
+      border-radius: 0 0 2rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .sub {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .presented-by {
+      background: rgba(255,255,255,0.12);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      backdrop-filter: blur(4px);
+    }
+
+    /* cards & sections */
+    section {
+      margin: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #1e3a3f;
+      border-left: 6px solid #d96c4e;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.03), 0 6px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s;
+      border: 1px solid #f0e2d4;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+      border-color: #e2c8b9;
+    }
+
+    .law-badge {
+      font-size: 0.7rem;
+      background: #f2e5de;
+      color: #b4532f;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #2c4b55;
+    }
+
+    .card p {
+      color: #3e4e54;
+      font-size: 0.95rem;
+    }
+
+    /* enhanced example cards with image */
+    .example-card {
+      background: #fef7f0;
+      border-left: 5px solid #d96c4e;
+      display: flex;
+      flex-direction: column;
+    }
+    .example-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      background: #e6d9cf;
+      transition: transform 0.2s;
+    }
+    .example-img:hover {
+      transform: scale(1.02);
+    }
+    .reflection-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .reflection-box {
+      flex: 1;
+      min-width: 240px;
+      background: #fff6ef;
+      border-radius: 1.5rem;
+      padding: 1.8rem;
+    }
+
+    .reflection-box h3 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+    .checklist li {
+      margin-bottom: 0.7rem;
+      padding-left: 1.7rem;
+      position: relative;
+    }
+    .checklist li::before {
+      content: "✓";
+      color: #2b6e4f;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    .issues-list {
+      list-style: none;
+      padding: 0;
+    }
+    .issues-list li {
+      margin-bottom: 0.7rem;
+      padding-left: 1.7rem;
+      position: relative;
+    }
+    .issues-list li::before {
+      content: "⚠️";
+      position: absolute;
+      left: 0;
+    }
+
+    .btn-soft {
+      background: #e9dfd7;
+      padding: 0.5rem 1rem;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #2c4b55;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .btn-soft:hover {
+      background: #d9cbbc;
+    }
+
+    footer {
+      background: #1e2a2f;
+      color: #dddddd;
+      padding: 2.5rem 0;
+      margin-top: 4rem;
+      border-radius: 2rem 2rem 0 0;
+    }
+
+    .footer-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .sources a {
+      color: #f5c9b0;
+      text-decoration: none;
+      border-bottom: 1px dotted;
+    }
+
+    @media (max-width: 680px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="hero">
+  <div class="container">
+    <div class="presented-by">📜 Group N6 · Presented to Mrs. Mary Jean Vidal</div>
+    <h1>Gender & Sexuality Laws<br>in the Philippines</h1>
+    <div class="sub">Protection · Equality · Accountability</div>
+    <div style="margin-top: 1rem; font-size: 0.9rem;">👥 Leader: Argie A. Garcia · Researcher: Aylen Entia</div>
+  </div>
+</div>
+
+<main class="container">
+  <!-- What are gender laws? -->
+  <section>
+    <div class="section-title">📌 What Are Gender Laws?</div>
+    <div class="grid-2col">
+      <div class="card">
+        <div style="font-size: 2rem;">🚫</div>
+        <h3>Prevent discrimination</h3>
+        <p>based on sex, gender, or sexual orientation — ensuring fair treatment in all spaces.</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 2rem;">🛡️</div>
+        <h3>Protect from violence</h3>
+        <p>shield individuals from gender-based violence, harassment, and abuse.</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 2rem;">⚖️</div>
+        <h3>Promote equality</h3>
+        <p>equal opportunities, resources, and access to justice for all genders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview of laws -->
+  <section>
+    <div class="section-title">📚 11+ Laws for Equality & Protection</div>
+    <div class="grid-2col">
+      <div class="card"><span class="law-badge">RA 9710</span><h3>Magna Carta of Women</h3><p>Comprehensive bill of rights for women — protects against discrimination in all areas of life.</p></div>
+      <div class="card"><span class="law-badge">RA 6725</span><h3>Anti-Discrimination in Employment</h3><p>Bans hiring, promotion, or training bias based on sex.</p></div>
+      <div class="card"><span class="law-badge">RA 7192</span><h3>Women in Development Act</h3><p>Integrates women in development, equal access to resources & opportunities.</p></div>
+      <div class="card"><span class="law-badge">RA 7877</span><h3>Anti-Sexual Harassment Act</h3><p>Unlawful sexual harassment in work, education, or training environments.</p></div>
+      <div class="card"><span class="law-badge">RA 7600</span><h3>Breastfeeding Act</h3><p>Requires workplaces to support breastfeeding & lactation stations.</p></div>
+      <div class="card"><span class="law-badge">RA 7322</span><h3>Expanded Maternity Leave</h3><p>Enhanced maternity benefits for female workers (right, not charity).</p></div>
+      <div class="card"><span class="law-badge">RA 9262</span><h3>Anti-VAWC Act</h3><p>Protects women & children from physical, sexual, psychological & economic abuse by intimate partners.</p></div>
+      <div class="card"><span class="law-badge">RA 8353</span><h3>Anti-Rape Law</h3><p>Rape as crime against persons, includes marital rape — vital shift.</p></div>
+      <div class="card"><span class="law-badge">RA 9208</span><h3>Anti-Trafficking in Persons Act</h3><p>Prohibits trafficking, especially of women & children; penalizes exploiters.</p></div>
+      <div class="card"><span class="law-badge">RA 7688</span><h3>Women in Military Act</h3><p>Allows women to hold combat roles in the military — equal service.</p></div>
+      <div class="card"><span class="law-badge">RA 10354</span><h3>Reproductive Health Law</h3><p>Access to family planning, sex education, and maternal care for all.</p></div>
+      <div class="card"><span class="law-badge">⚖️ SOGIE Bill (proposed)</span><h3>SOGIE Equality Act</h3><p>Would prohibit discrimination based on Sexual Orientation, Gender Identity, Expression — extending protections to LGBTQIA+.</p></div>
+    </div>
+  </section>
+
+  <!-- Real-life applications (examples) with PHOTOS added -->
+  <section>
+    <div class="section-title">💡 Real-Life Application of Laws — with visual stories</div>
+    <div class="grid-2col">
+      <!-- Example 1 - VAWC economic abuse -->
+      <div class="card example-card">
+        <img class="example-img" src="images/fdf69818-1b3e-46df-aefd-eca986ec9a5b.jpg" alt="Woman feeling distressed at home, symbolizing economic abuse" loading="lazy">
+        <span class="law-badge">RA 9262 (VAWC)</span>
+        <h3>Economic abuse at home</h3>
+        <p><strong>Scenario:</strong> Wife experiences financial control — husband denies money for food. <br> <strong>Law works:</strong> She can file a Protection Order; barangay/court mandates financial support & protection.</p>
+      </div>
+      <!-- Example 2 - Sexual harassment at workplace -->
+      <div class="card example-card">
+        <img class="example-img" src="images/a6ce74cd-d17d-4bda-afa7-4582d16b90ac.jpg" alt="Office harassment scenario, uncomfortable workplace" loading="lazy">
+        <span class="law-badge">RA 7877 (Sexual Harassment)</span>
+        <h3>Unwanted jokes at work</h3>
+        <p><strong>Scenario:</strong> Male employee receives sexual jokes from supervisor. <br> <strong>Law works:</strong> Company investigates; supervisor faces admin & criminal liability.</p>
+      </div>
+      <!-- Example 3 - Reproductive health / teen denied contraception -->
+      <div class="card example-card">
+        <img class="example-img" src="images/97481fde-de9c-4923-9675-9787f28f2ef1.jpg" alt="Teen talking to healthcare provider about contraception" loading="lazy">
+        <span class="law-badge">RA 10354 (RH Law)</span>
+        <h3>Teen denied contraception</h3>
+        <p><strong>Scenario:</strong> Clinic refuses due to personal beliefs. <br> <strong>Law works:</strong> Clinic must refer to another provider; DOH can sanction violations.</p>
+      </div>
+      <!-- Example 4 - Employment discrimination based on gender bias -->
+      <div class="card example-card">
+        <img class="example-img" src="images/7b9a0eed-96b5-4590-99f6-65cbb7e6020b.jpg" alt="Qualified female professional in office meeting" loading="lazy">
+        <span class="law-badge">RA 6725 (Employment)</span>
+        <h3>Gender bias in hiring</h3>
+        <p><strong>Scenario:</strong> Qualified female rejected for managerial role due to "men are better leaders". <br> <strong>Law works:</strong> DOLE complaint filed; employer fined for discrimination.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Critical reflection: promoting equality + remaining issues -->
+  <section>
+    <div class="section-title">🔍 Critical Reflection — Progress & Gaps</div>
+    <div class="reflection-grid">
+      <div class="reflection-box" style="background:#eaf7f0;">
+        <h3>✅ How laws promote equality</h3>
+        <ul class="checklist">
+          <li>Recognize women’s rights as human rights</li>
+          <li>Criminalize violence & harassment</li>
+          <li>Access to health, employment & safety nets</li>
+          <li>Shift from “charity” to “entitlement” (maternity leave as right)</li>
+          <li>Proposed SOGIE Bill extends protections to LGBTQIA+</li>
+        </ul>
+      </div>
+      <div class="reflection-box" style="background:#fef0ea;">
+        <h3>⚠️ Remaining Issues</h3>
+        <ul class="issues-list">
+          <li>Poor implementation & enforcement</li>
+          <li>Lack of awareness among citizens & authorities</li>
+          <li>Cultural/religious resistance (RH law, SOGIE Bill)</li>
+          <li>Underreporting of VAWC, rape, harassment due to stigma</li>
+          <li>No national SOGIE law yet — LGBTQIA+ remain vulnerable</li>
+          <li>Gaps in access for rural, indigenous, disabled women</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- conclusion & our role -->
+  <section>
+    <div class="section-title">🏛️ Why Gender Laws Matter Today</div>
+    <div class="card" style="background: #fdf4e6; margin-bottom: 1.5rem;">
+      <p style="font-size: 1.1rem;"><strong>Gender-based violence and discrimination persist</strong> — laws set minimum standards and accountability. <br> Are these laws enough? <strong>No</strong> — we need the SOGIE Bill, stronger enforcement, budget allocation, and public education.</p>
+    </div>
+    <div class="section-title" style="margin-top: 2rem;">🤝 Our Role in Promoting Equality</div>
+    <div class="grid-2col">
+      <div class="card"><div style="font-size: 1.8rem;">🗣️</div><h3>Speak up</h3><p>When we witness discrimination, call it out — in schools, workplaces, social media.</p></div>
+      <div class="card"><div style="font-size: 1.8rem;">🤲</div><h3>Support survivors</h3><p>Believe, don’t blame. Offer resources and compassion.</p></div>
+      <div class="card"><div style="font-size: 1.8rem;">📢</div><h3>Educate peers</h3><p>Share knowledge about RA 9262, RA 7877, SOGIE Bill, and legal remedies.</p></div>
+      <div class="card"><div style="font-size: 1.8rem;">🏳️‍🌈</div><h3>Advocate for SOGIE Bill</h3><p>Push for national law protecting LGBTQIA+ from all forms of discrimination.</p></div>
+      <div class="card"><div style="font-size: 1.8rem;">💭</div><h3>Challenge stereotypes</h3><p>At home, in media, daily conversations — break gender norms.</p></div>
+    </div>
+  </section>
+
+  <!-- sources / official references -->
+  <section>
+    <div class="section-title">📖 Official Sources & References</div>
+    <div class="card" style="background: white;">
+      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
+        <div>
+          <strong>🇵🇭 Official Gazette</strong><br>
+          <a href="https://www.officialgazette.gov.ph" target="_blank" style="color:#b4532f;">officialgazette.gov.ph</a> (search by RA number)
+        </div>
+        <div>
+          <strong>⚖️ LawPhil Project</strong><br>
+          <a href="https://lawphil.net" target="_blank" style="color:#b4532f;">lawphil.net</a>
+        </div>
+        <div>
+          <strong>👩 Philippine Commission on Women</strong><br>
+          <a href="https://pcw.gov.ph" target="_blank" style="color:#b4532f;">pcw.gov.ph</a>
+        </div>
+        <div>
+          <strong>📜 SOGIE Bill (proposed)</strong><br>
+          House Bill No. 4982 — <a href="https://congress.gov.ph" target="_blank" style="color:#b4532f;">Congress.gov.ph</a>
+        </div>
+      </div>
+      <hr style="margin: 1rem 0; border-color:#f0e2d4;">
+      <p style="font-size: 0.85rem; color:#5f6c70;">RA 9710 IRR, DOLE, DSWD, DOH issuances · PCW references</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-flex">
+    <div>
+      <strong style="font-weight: 700;">🌈 Together, we can build a more equal, safe, and inclusive Philippines.</strong>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem;">© 2026 · Gender & Society Group N6</p>
+    </div>
+    <div class="sources">
+      📍 Presentation by Argie A. Garcia & Aylen Entia <br>
+      📍 For educational advocacy — imagery for visual storytelling.
+    </div>
+  </div>
+</footer>
+</body>
+</html>
